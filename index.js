@@ -38,10 +38,13 @@ var game = {
                                 console.log("You lost");
                                 return game.reset()
                             }
-                            console.log("Chances", game.chances);
+                            game.wordsUsed.push(res.answer);
+                            console.log("Chances:", game.chances);
                             game.next();
                         } else {
+                            game.wordsUsed.push(res.answer);
                             console.log("Nice! Can you keep going?!");
+
                             game.next();
                         }
                         
